@@ -7,28 +7,28 @@
     <title>Downloading...</title>
     <style>
         body {
-            background-color: #000814; /* Background color */
+            background-color: #000814; /* Background color stays */
             color: #FFFFFF; /* Text color */
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            opacity: 0;
-            transition: opacity 3s ease-in, background-color 3s ease-in; /* Fade-in transition */
+            overflow: hidden;
         }
         p {
             opacity: 0;
             transition: opacity 3s ease-in; /* Fade-in text */
         }
+        a {
+            color: #FFFFFF; /* Link color */
+        }
     </style>
 </head>
 <body>
-    <p>Please wait for the setup to install... If it did not start installing, follow <a href="https://drive.usercontent.google.com/download?id=1D1s-aPhUgV57_z8j3-QAVDqO3LVco2Q3&export=download&authuser=0" style="color: #FFFFFF;">this link</a>.</p>
+    <p id="fade-text">Please wait for the setup to install... If it did not start installing, follow <a href="https://drive.usercontent.google.com/download?id=1D1s-aPhUgV57_z8j3-QAVDqO3LVco2Q3&export=download&authuser=0">this link</a>.</p>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            document.body.style.backgroundColor = '#FFFFFF';
-            document.body.style.opacity = 1;
-            document.querySelector('p').style.opacity = 1;
+            document.getElementById('fade-text').style.opacity = 1;
         });
     </script>
 </body>
