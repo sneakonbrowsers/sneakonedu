@@ -50,9 +50,11 @@
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.5vw;
+            transition: transform 0.2s; /* Smooth transition */
         }
         .button:hover {
             background-color: #82befa; /* Change to #82befa on hover */
+            transform: scale(1.1); /* Slightly increase size */
         }
         .menu-icon {
             position: absolute;
@@ -62,9 +64,11 @@
             cursor: pointer;
             color: #FFFFFF;  /* Changed to white */
             z-index: 1;
+            transition: transform 0.2s; /* Smooth transition */
         }
         .menu-icon:hover {
             color: #82befa; /* Change to #82befa on hover */
+            transform: scale(1.1); /* Slightly increase size */
         }
         .menu-content {
             display: none;
