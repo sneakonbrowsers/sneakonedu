@@ -28,7 +28,9 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById('fade-text').style.opacity = 1;
+            setTimeout(function() {
+                document.getElementById('fade-text').style.opacity = 1;
+            }, 100); // Delay the opacity change slightly to ensure it transitions smoothly
         });
     </script>
 </body>
