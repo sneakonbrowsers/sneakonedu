@@ -1,36 +1,109 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneakon Kids - Coming Soon</title>
+    <title>Sneakon</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #1e90ff;
-            color: #fff;
+            color: #d1ff00;
+            background-color: #f0f0f0;
+        }
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://sneakonbrowsers.github.io/Browser%20(3).png');
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             text-align: center;
         }
-        .coming-soon-text {
-            font-size: 5vw;
-            margin-bottom: 20px;
+        .banner-text {
+            position: absolute;
+            top: 20px;
+            font-size: 2vw; /* Reduced font size */
             font-weight: bold;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px; /* Reduced padding */
         }
-        .subtext {
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
             font-size: 2vw;
+        }
+        .buttons {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        .button {
+            background-color: #d1ff00;
+            color: #000;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.5vw;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2vw;
+            cursor: pointer;
+            color: #d1ff00;
+            z-index: 1;
+        }
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .menu-content a {
+            color: #d1ff00;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+        .menu-content a:hover {
+            background-color: #555;
         }
     </style>
 </head>
-<body>
-    <div>
-        <div class="coming-soon-text">Sneakon EDU</div>
-        <div class="subtext">Coming Soon</div>
+<body class="no-outline">
+    <div class="banner">
+        <div class="header">Sneakon</div>
+        <div class="banner-text">Imaginated, Created</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-content" id="menuContent">
+            <a href="https://sneakonbrowsers.github.io/sneakonkids">Sneakon Kids</a>
+            <a href="https://sneakonbrowsers.github.io/sneakonedu">Sneakon EDU</a>
+        </div>
+        <div class="buttons">
+            <a href="/download" class="button">Download</a>
+            <a href="/socials" class="button">Socials</a>
+        </div>
     </div>
+    <script>
+        function toggleMenu() {
+            var menuContent = document.getElementById('menuContent');
+            if (menuContent.style.display === 'none' || menuContent.style.display === '') {
+                menuContent.style.display = 'block';
+            } else {
+                menuContent.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
