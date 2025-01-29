@@ -12,7 +12,12 @@
             font-family: Arial, sans-serif;
             background-color: #000814;
             opacity: 0;
-            transition: opacity 3s ease-in; /* Fade-in transition */
+            transition: background-color 3s ease-in, opacity 3s ease-in; /* Fade-in transition */
+        }
+        p {
+            color: #FFFFFF;
+            opacity: 0;
+            transition: opacity 3s ease-in; /* Fade-in text */
         }
     </style>
 </head>
@@ -21,7 +26,9 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.backgroundColor = '#FFFFFF';
             document.body.style.opacity = 1;
+            document.querySelector('p').style.opacity = 1;
         });
     </script>
 </body>
